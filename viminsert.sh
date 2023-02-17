@@ -13,4 +13,4 @@ xdotool key c
 sleep 0.1
 xdotool keyup ctrl
 
-kitty --class floatwin -- bash -c "xsel -b -o | vipe --suffix txt | xsel -b -i && xdotool windowactivate $win && xdotool key ctrl+v"
+kitty --class floatwin -- bash -c "xclip -selection clipboard -o | vipe --suffix txt | xclip -selection clipboard -i && xdotool windowactivate $win && xdotool key ctrl+v"
