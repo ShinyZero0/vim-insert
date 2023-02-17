@@ -9,7 +9,7 @@ There is also a vim config that may be useful if you are going to use the script
 
 # deps
 Make sure you have these installed:
-* vipe (allows to | pipe text into EDITOR and out)
+* vipe from moreutils (allows to | pipe text into EDITOR and out)
 * xkb-switch
 * xdotool
 * xsel
