@@ -18,7 +18,7 @@ Make sure you have these installed:
 * vipe from moreutils (allows to | pipe text into EDITOR and out)
 * xkb-switch
 * xdotool
-* xsel
+* xclip
 
 And these you may want to change as you prefer
 * neovim
