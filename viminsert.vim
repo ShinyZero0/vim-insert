@@ -22,7 +22,7 @@ vnoremap <silent> gs ml:s/\([\.?!]\) \([А-ЯA-Z]\)/\1\r\2/ge\|:'[,']normal ==<C
 
 " SELECT THE WHOLE BUFFER WITH vA or VA
 " vnoremap A <Esc>ggVG
-" If you are going to use visual block A, because the previous one breaks it
+" If you are going to use visual block A, leave the following func, because the previous mapping breaks it
 function SelectAll()
     let curMode = mode()
     if curMode == "V"
