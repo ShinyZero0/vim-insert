@@ -9,7 +9,9 @@ xdotool keyup super
 xdotool keyup alt
 
 xdotool keydown ctrl
+sleep 0.2
 xdotool key c
+sleep 0.2
 xdotool keyup ctrl
 
 kitty --class floatwin -- bash -c \
@@ -19,7 +21,9 @@ kitty --class floatwin -- bash -c \
     xdotool windowactivate $win &&\
     xdotool keyup shift &&\
     xdotool keyup super &&\
-    xdotool keyup alt &&\
+    xdotool keyup alt   &&\
     xdotool keydown ctrl &&\
+    sleep 0.2 &&\
     xdotool key v &&\
+    sleep 0.2 &&\
     xdotool keyup ctrl"
