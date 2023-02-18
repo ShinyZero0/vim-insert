@@ -21,4 +21,14 @@ nnoremap <silent> gsip mlvip:s/\([\.?!]\) \([А-ЯA-Z]\)/\1\r\2/ge\|:'[,']normal
 vnoremap <silent> gs ml:s/\([\.?!]\) \([А-ЯA-Z]\)/\1\r\2/ge\|:'[,']normal ==<CR>:noh<CR>'l
 
 " SELECT THE WHOLE BUFFER WITH vA or VA
-vnoremap A <Esc>ggVG
+" vnoremap A <Esc>ggVG
+" If you are going to use visual block A, because the previous one breaks it
+function SelectAll()
+    let curMode = mode()
+    if curMode == "V"
+        call feedkeys("\<Esc>ggVG", "n")
+    else
+        call feedkeys("A", 'n')
+    endif
+endfunction
+vnoremap A <cmd>call SelectAll()<CR>
