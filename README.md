@@ -8,7 +8,9 @@ Note that it works only on X11, if you don't want to completely rewrite the scri
 I successfully use it to edit and paste text in LibreOffice. 
 
 There is also a vim config that may be useful if you are going to use the script. It provides: 
-* sentence splitter which splits English/Cyrillic sentences by regex which matches a sequence of ./!/?, whitespace and a capital character. This way you can edit the text more comfortable with vim, and before pasting just do ggVGJ (VAJ if you source viminsert.vim) to **J**oin them back.
+* sentence splitter which splits English/Cyrillic sentences by regex which matches a sequence of ./!/?, whitespace and a capital character.
+This way you can edit the text more comfortable with vim.
+Before pasting just use J or [sharpjoin](https://github.com/ShinyZero0/sharpjoin/tree/main) to join them back.
 * autocmd to soft-wrap text by words on plain text filetype, which you will edit
 * layout switcher which will preserve your layout and switch to US when leaving Insert mode and restore the layout when you return to Insert mode.
 * mapping to select all text with vA or VA
