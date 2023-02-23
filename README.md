@@ -1,9 +1,9 @@
 # vim-insert
-Bind this script to some button and you will be able to edit the selection with Vim in any GUI. The selection will be copied to CLIPBOARD with Ctrl-C emulated by xdotool.
+
+Bind this script to some button and you will be able to edit the selection with (Neo)Vim in any GUI application. The selection will be copied to CLIPBOARD with Ctrl-C emulated by xdotool and preserved in viminsertoldclip.txt file in home.
 Keyboard layout will be changed to US automatically.
-After :wq the edited text will be copied to CLIPBOARD and then pasted by emulating Ctrl-V with xdotool, which most likely will replace the previosly selected text. If something broke (it shouldn't) and text wasn't copied and you want to abort changes, close the terminal window. Then it won't paste and leave your selection alone.
+After quitting the editor the edited text will be copied to CLIPBOARD and then pasted by emulating Ctrl-V with xdotool, which most likely will replace the previosly selected text, and then the initial content of clipboard will be restored. If something broke (it shouldn't) and text wasn't copied and you want to abort changes, close the terminal window. Then it won't paste and leave your selection alone.
 You can adapt it to your system by changing the terminal, the window class (i need that to prevent i3wm from tiling the vim window), changing the EDITOR.
-I'm actually just sharing an idea.
 Note that it works only on X11, if you don't want to completely rewrite the script (which is not that hard).
 I successfully use it to edit and paste text in LibreOffice. 
 
@@ -16,12 +16,14 @@ Before pasting just use J or [sharpjoin](https://github.com/ShinyZero0/sharpjoin
 * mapping to select all text with vA or VA
 
 # deps
+
 Make sure you have these installed:
-* vipe from moreutils (allows to | pipe text into EDITOR and out)
+
 * xkb-switch
 * xdotool
 * xclip
 
 And these you may want to change as you prefer
+
 * neovim
 * kitty
