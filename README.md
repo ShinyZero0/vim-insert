@@ -1,8 +1,10 @@
 # vim-insert
 
-Bind this script to some button and you will be able to edit the selection with (Neo)Vim in any GUI application. The selection will be copied to CLIPBOARD with Ctrl-C emulated by xdotool and preserved in viminsertoldclip.txt file in home.
+Bind this script to some button and you will be able to edit the selection with (Neo)Vim in any GUI application. The selection will be copied to CLIPBOARD with Ctrl-C emulated by xdotool. The old selection will be preserved in viminsertoldclip.txt file in home.
 Keyboard layout will be changed to US automatically.
-After quitting the editor the edited text will be copied to CLIPBOARD and then pasted by emulating Ctrl-V with xdotool, which most likely will replace the previosly selected text, and then the initial content of clipboard will be restored. If something broke (it shouldn't) and text wasn't copied and you want to abort changes, close the terminal window. Then it won't paste and leave your selection alone.
+After quitting the editor the edited text will be copied to CLIPBOARD and then pasted by emulating Ctrl-V with xdotool, which most likely will replace the previosly selected text, and then the initial content of clipboard will be restored.
+If something broke (it shouldn't) and text wasn't copied and you want to abort changes, close the terminal window.
+Then it won't paste and leave your selection alone.
 You can adapt it to your system by changing the terminal, the window class (i need that to prevent i3wm from tiling the vim window), changing the EDITOR.
 Note that it works only on X11, if you don't want to completely rewrite the script (which is not that hard).
 I successfully use it to edit and paste text in LibreOffice. 
