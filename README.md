@@ -29,3 +29,4 @@ And these you may want to change as you prefer
 
 * neovim
 * kitty
+* typograf-cli to sub double dash to long dash and other cool things
